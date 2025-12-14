@@ -1,0 +1,23 @@
+{
+  "name": "rpt-app",
+  "version": "1.0.0",
+  "description": "RPT app para Aranda de Duero - Organizational Structure Management",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "keywords": [
+    "rpt",
+    "organizational-structure",
+    "organigrama"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
