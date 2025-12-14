@@ -483,6 +483,7 @@ class RPTManager:
         details['Puntuación_Total'] = puesto.get_total_valoracion()
         
         # Add hierarchy information
+        # chain[0] is the position itself, chain[1] is its direct superior
         chain = self.get_hierarchy_chain(puesto.ID_Puesto)
         if len(chain) > 1:
             details['Superior'] = chain[1].Denominacion
