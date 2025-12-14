@@ -214,6 +214,7 @@ def should_respond_in_spanish(user_request: str) -> bool:
         if keyword in request_lower:
             return False
     
+    # Default behavior: always respond in Spanish unless translation is explicitly requested
     return True
 
 # Constraints Enforcement

@@ -323,9 +323,9 @@ def run_tests():
     print(f"Errores: {len(result.errors)}")
     print("=" * 80)
     
-    return result.wasSuccessful()
+    return 0 if result.wasSuccessful() else 1
 
 
 if __name__ == "__main__":
-    success = run_tests()
-    exit(0 if success else 1)
+    import sys
+    sys.exit(run_tests())
