@@ -62,7 +62,6 @@ The RPT Main Table stores job position information and links to the valuation le
 | `valoracion_C` | VARCHAR(20) | Level achieved for Factor C |
 | `valoracion_D` | VARCHAR(20) | Level achieved for Factor D |
 | `valoracion_E` | VARCHAR(20) | Level achieved for Factor E |
-| `puntuacion_total` | INTEGER | Calculated total score |
 | `created_at` | TIMESTAMP | Record creation timestamp |
 | `updated_at` | TIMESTAMP | Record update timestamp |
 
@@ -74,6 +73,13 @@ Each `valoracion_X` field references the `nivel` field in the corresponding fact
 - `valoracion_C` → `Valoracion_Factor_C.nivel`
 - `valoracion_D` → `Valoracion_Factor_D.nivel`
 - `valoracion_E` → `Valoracion_Factor_E.nivel`
+
+### Score Calculation
+
+The total score is **not stored** in the RPT_Main table to avoid data inconsistency. Instead, it is calculated dynamically in the `RPT_View_Complete` view by joining with the factor tables and summing the individual factor scores. This ensures that:
+- Scores are always up-to-date if factor scores change
+- No risk of stored scores becoming out-of-sync with factor tables
+- Single source of truth for score values
 
 ## Complete View (RPT_View_Complete)
 

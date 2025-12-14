@@ -77,9 +77,6 @@ CREATE TABLE IF NOT EXISTS RPT_Main (
     valoracion_D VARCHAR(20), -- References nivel in Valoracion_Factor_D
     valoracion_E VARCHAR(20), -- References nivel in Valoracion_Factor_E
     
-    -- Calculated total score
-    puntuacion_total INTEGER,
-    
     -- Timestamps
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,

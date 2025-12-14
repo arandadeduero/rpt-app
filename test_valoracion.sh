@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Test script for Valoración Factors Tables implementation
 
 set -e
@@ -28,7 +28,7 @@ echo ""
 
 # Test 1: Check all tables exist
 echo "Test 1: Checking all tables exist..."
-TABLES=$(sqlite3 "$TEST_DB" "SELECT COUNT(*) FROM sqlite_master WHERE type='table' AND name LIKE 'Valoracion_Factor_%' OR name='RPT_Main';")
+TABLES=$(sqlite3 "$TEST_DB" "SELECT COUNT(*) FROM sqlite_master WHERE (type='table' AND name LIKE 'Valoracion_Factor_%') OR (type='table' AND name='RPT_Main');")
 if [ "$TABLES" -eq 6 ]; then
     echo "✓ All 6 tables created successfully"
 else
@@ -88,6 +88,7 @@ fi
 # Test 6: Check view calculates scores correctly
 echo ""
 echo "Test 6: Checking view calculates scores correctly..."
+# P003 "Jefe de Servicio" has valoracion V,V,V,V,IV = 400+400+400+400+280 = 1880
 RESULT=$(sqlite3 "$TEST_DB" "SELECT codigo_puesto, puntuacion_total FROM RPT_View_Complete WHERE codigo_puesto='P003';")
 if [[ $RESULT == *"1880"* ]]; then
     echo "✓ View calculates total scores correctly"
