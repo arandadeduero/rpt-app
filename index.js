@@ -3,7 +3,7 @@ import AdminJS from 'adminjs';
 import * as AdminJSExpress from '@adminjs/express';
 import * as AdminJSSequelize from '@adminjs/sequelize';
 import session from 'express-session';
-import { sequelize, Puestos, syncDatabase } from './models/index.js';
+import { sequelize, Puestos, Factores, Niveles, PuestoFactores, syncDatabase } from './models/index.js';
 
 // Register the Sequelize adapter
 AdminJS.registerAdapter({
@@ -65,6 +65,97 @@ const adminOptions = {
         navigation: {
           name: 'RPT',
           icon: 'Users',
+        },
+      },
+    },
+    {
+      resource: Factores,
+      options: {
+        properties: {
+          ID_Factor: {
+            isVisible: { list: true, filter: true, show: true, edit: false },
+          },
+          Nombre: {
+            isVisible: true,
+            isTitle: true,
+          },
+          Definición: {
+            type: 'textarea',
+            isVisible: { list: false, filter: false, show: true, edit: true },
+          },
+          createdAt: {
+            isVisible: { list: false, filter: false, show: true, edit: false },
+          },
+          updatedAt: {
+            isVisible: { list: false, filter: false, show: true, edit: false },
+          },
+        },
+        navigation: {
+          name: 'Factores',
+          icon: 'List',
+        },
+      },
+    },
+    {
+      resource: Niveles,
+      options: {
+        properties: {
+          ID_Nivel: {
+            isVisible: { list: true, filter: true, show: true, edit: false },
+          },
+          ID_Factor: {
+            isVisible: true,
+          },
+          Nombre: {
+            isVisible: true,
+            isTitle: true,
+          },
+          Descripción: {
+            type: 'textarea',
+            isVisible: { list: false, filter: false, show: true, edit: true },
+          },
+          Puntos: {
+            isVisible: true,
+          },
+          createdAt: {
+            isVisible: { list: false, filter: false, show: true, edit: false },
+          },
+          updatedAt: {
+            isVisible: { list: false, filter: false, show: true, edit: false },
+          },
+        },
+        navigation: {
+          name: 'Factores',
+          icon: 'List',
+        },
+      },
+    },
+    {
+      resource: PuestoFactores,
+      options: {
+        properties: {
+          ID_Puesto_Factor: {
+            isVisible: { list: true, filter: true, show: true, edit: false },
+          },
+          ID_Puesto: {
+            isVisible: true,
+          },
+          ID_Factor: {
+            isVisible: true,
+          },
+          ID_Nivel: {
+            isVisible: true,
+          },
+          createdAt: {
+            isVisible: { list: false, filter: false, show: true, edit: false },
+          },
+          updatedAt: {
+            isVisible: { list: false, filter: false, show: true, edit: false },
+          },
+        },
+        navigation: {
+          name: 'Relaciones',
+          icon: 'Link',
         },
       },
     },

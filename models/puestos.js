@@ -72,6 +72,14 @@ export default (sequelize) => {
       foreignKey: 'ID_Jefe_Superior',
       as: 'Subordinados',
     });
+    
+    // A Puesto can have many Factores through PuestoFactores
+    Puestos.belongsToMany(models.Factores, {
+      through: models.PuestoFactores,
+      foreignKey: 'ID_Puesto',
+      otherKey: 'ID_Factor',
+      as: 'Factores',
+    });
   };
 
   return Puestos;
