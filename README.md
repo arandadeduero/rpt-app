@@ -20,6 +20,36 @@ pip install -r requirements.txt
 
 ## Usage
 
+### Command Line Interface (CLI)
+
+The easiest way to interact with the RPT system is through the CLI:
+
+```bash
+# Interactive mode
+python rpt_cli.py
+
+# Or execute single commands
+python rpt_cli.py buscar ADM2025
+python rpt_cli.py listar area Cultura
+python rpt_cli.py puntuacion "Técnico de Urbanismo"
+python rpt_cli.py jerarquia 45
+python rpt_cli.py comparar Administrativo y "Auxiliar Administrativo"
+python rpt_cli.py media Cultura
+python rpt_cli.py factor B
+python rpt_cli.py ayuda
+```
+
+Available CLI commands:
+- `buscar <codigo|nombre>` - Search for a position by code or name
+- `listar [area|vacantes ...]` - List positions by criteria
+- `puntuacion <nombre>` - Calculate total valuation score
+- `jerarquia <nombre|ID>` - Show organizational hierarchy
+- `comparar <puesto1> y <puesto2>` - Compare two positions
+- `media [area]` - Calculate average salary by area
+- `factor [A-E]` - Explain valuation factors
+- `ayuda` - Show help
+- `salir` - Exit
+
 ### Python API
 
 ```python

@@ -1,0 +1,242 @@
+[
+  {
+    "ID_Puesto": 1,
+    "Código_Interno": "SEC2025",
+    "Denominacion": "Secretario General",
+    "Número_Vacantes": 1,
+    "Área": "Secretaría",
+    "Descripción_Funciones": "Dirección y coordinación de todos los servicios administrativos del Ayuntamiento. Fe pública. Asesoramiento legal.",
+    "Salario": 45000.0,
+    "Valoración_A": {
+      "nivel": "Nivel V",
+      "puntuacion": 50
+    },
+    "Valoración_B": {
+      "nivel": "Nivel V",
+      "puntuacion": 50
+    },
+    "Valoración_C": {
+      "nivel": "Nivel V",
+      "puntuacion": 50
+    },
+    "Valoración_D": {
+      "nivel": "Nivel V",
+      "puntuacion": 50
+    },
+    "Valoración_E": {
+      "nivel": "Nivel II",
+      "puntuacion": 20
+    },
+    "ID_Superior": null
+  },
+  {
+    "ID_Puesto": 2,
+    "Código_Interno": "TES2025",
+    "Denominacion": "Tesorero",
+    "Número_Vacantes": 1,
+    "Área": "Hacienda",
+    "Descripción_Funciones": "Gestión financiera y presupuestaria del Ayuntamiento. Control de tesorería, pagos y cobros. Gestión de inversiones.",
+    "Salario": 42000.0,
+    "Valoración_A": {
+      "nivel": "Nivel V",
+      "puntuacion": 50
+    },
+    "Valoración_B": {
+      "nivel": "Nivel IV",
+      "puntuacion": 40
+    },
+    "Valoración_C": {
+      "nivel": "Nivel IV",
+      "puntuacion": 40
+    },
+    "Valoración_D": {
+      "nivel": "Nivel V",
+      "puntuacion": 50
+    },
+    "Valoración_E": {
+      "nivel": "Nivel II",
+      "puntuacion": 20
+    },
+    "ID_Superior": 1
+  },
+  {
+    "ID_Puesto": 45,
+    "Código_Interno": "JEF-HAC-2025",
+    "Denominacion": "Jefe de Servicio de Hacienda",
+    "Número_Vacantes": 1,
+    "Área": "Hacienda",
+    "Descripción_Funciones": "Coordinación del servicio de Hacienda. Elaboración de presupuestos. Supervisión de contabilidad y fiscalidad.",
+    "Salario": 38000.0,
+    "Valoración_A": {
+      "nivel": "Nivel IV",
+      "puntuacion": 40
+    },
+    "Valoración_B": {
+      "nivel": "Nivel IV",
+      "puntuacion": 40
+    },
+    "Valoración_C": {
+      "nivel": "Nivel IV",
+      "puntuacion": 40
+    },
+    "Valoración_D": {
+      "nivel": "Nivel IV",
+      "puntuacion": 40
+    },
+    "Valoración_E": {
+      "nivel": "Nivel II",
+      "puntuacion": 20
+    },
+    "ID_Superior": 2
+  },
+  {
+    "ID_Puesto": 3,
+    "Código_Interno": "ADM2025",
+    "Denominacion": "Administrativo",
+    "Número_Vacantes": 3,
+    "Área": "Administración General",
+    "Descripción_Funciones": "Tramitación de expedientes administrativos. Registro y archivo de documentos. Atención al público.",
+    "Salario": 24000.0,
+    "Valoración_A": {
+      "nivel": "Nivel III",
+      "puntuacion": 30
+    },
+    "Valoración_B": {
+      "nivel": "Nivel III",
+      "puntuacion": 30
+    },
+    "Valoración_C": {
+      "nivel": "Nivel III",
+      "puntuacion": 30
+    },
+    "Valoración_D": {
+      "nivel": "Nivel III",
+      "puntuacion": 30
+    },
+    "Valoración_E": {
+      "nivel": "Nivel II",
+      "puntuacion": 20
+    },
+    "ID_Superior": 45
+  },
+  {
+    "ID_Puesto": 4,
+    "Código_Interno": "AUX2025",
+    "Denominacion": "Auxiliar Administrativo",
+    "Número_Vacantes": 2,
+    "Área": "Administración General",
+    "Descripción_Funciones": "Apoyo administrativo. Registro de entrada y salida. Archivo y digitalización de documentos.",
+    "Salario": 18000.0,
+    "Valoración_A": {
+      "nivel": "Nivel II",
+      "puntuacion": 20
+    },
+    "Valoración_B": {
+      "nivel": "Nivel II",
+      "puntuacion": 20
+    },
+    "Valoración_C": {
+      "nivel": "Nivel II",
+      "puntuacion": 20
+    },
+    "Valoración_D": {
+      "nivel": "Nivel II",
+      "puntuacion": 20
+    },
+    "Valoración_E": {
+      "nivel": "Nivel II",
+      "puntuacion": 20
+    },
+    "ID_Superior": 45
+  },
+  {
+    "ID_Puesto": 5,
+    "Código_Interno": "TEC-URB-2025",
+    "Denominacion": "Técnico de Urbanismo",
+    "Número_Vacantes": 2,
+    "Área": "Urbanismo",
+    "Descripción_Funciones": "Elaboración de planes urbanísticos. Tramitación de licencias de obras. Inspección técnica de edificaciones.",
+    "Salario": 32000.0,
+    "Valoración_A": {
+      "nivel": "Nivel IV",
+      "puntuacion": 40
+    },
+    "Valoración_B": {
+      "nivel": "Nivel III",
+      "puntuacion": 30
+    },
+    "Valoración_C": {
+      "nivel": "Nivel IV",
+      "puntuacion": 40
+    },
+    "Valoración_D": {
+      "nivel": "Nivel III",
+      "puntuacion": 30
+    },
+    "Valoración_E": {
+      "nivel": "Nivel III",
+      "puntuacion": 30
+    },
+    "ID_Superior": 1
+  },
+  {
+    "ID_Puesto": 6,
+    "Código_Interno": "TEC-CUL-2025",
+    "Denominacion": "Técnico de Cultura",
+    "Número_Vacantes": 1,
+    "Área": "Cultura",
+    "Descripción_Funciones": "Organización de eventos culturales. Gestión de espacios culturales. Coordinación con asociaciones culturales.",
+    "Salario": 28000.0,
+    "Valoración_A": {
+      "nivel": "Nivel III",
+      "puntuacion": 30
+    },
+    "Valoración_B": {
+      "nivel": "Nivel III",
+      "puntuacion": 30
+    },
+    "Valoración_C": {
+      "nivel": "Nivel III",
+      "puntuacion": 30
+    },
+    "Valoración_D": {
+      "nivel": "Nivel III",
+      "puntuacion": 30
+    },
+    "Valoración_E": {
+      "nivel": "Nivel II",
+      "puntuacion": 20
+    },
+    "ID_Superior": 1
+  },
+  {
+    "ID_Puesto": 7,
+    "Código_Interno": "AUX-CUL-2025",
+    "Denominacion": "Auxiliar de Cultura",
+    "Número_Vacantes": 2,
+    "Área": "Cultura",
+    "Descripción_Funciones": "Apoyo en eventos culturales. Atención al público en espacios culturales. Gestión de reservas.",
+    "Salario": 20000.0,
+    "Valoración_A": {
+      "nivel": "Nivel II",
+      "puntuacion": 20
+    },
+    "Valoración_B": {
+      "nivel": "Nivel II",
+      "puntuacion": 20
+    },
+    "Valoración_C": {
+      "nivel": "Nivel II",
+      "puntuacion": 20
+    },
+    "Valoración_D": {
+      "nivel": "Nivel II",
+      "puntuacion": 20
+    },
+    "Valoración_E": {
+      "nivel": "Nivel II",
+      "puntuacion": 20
+    },
+    "ID_Superior": 6
+  }
+]
