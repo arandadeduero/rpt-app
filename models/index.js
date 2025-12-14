@@ -2,6 +2,9 @@ import { Sequelize } from 'sequelize';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import puestosModel from './puestos.js';
+import factoresModel from './factores.js';
+import nivelesModel from './niveles.js';
+import puestoFactoresModel from './puestoFactores.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -15,9 +18,12 @@ const sequelize = new Sequelize({
 
 // Import models
 const Puestos = puestosModel(sequelize);
+const Factores = factoresModel(sequelize);
+const Niveles = nivelesModel(sequelize);
+const PuestoFactores = puestoFactoresModel(sequelize);
 
 // Setup associations
-const models = { Puestos };
+const models = { Puestos, Factores, Niveles, PuestoFactores };
 Object.values(models).forEach((model) => {
   if (model.associate) {
     model.associate(models);
@@ -40,4 +46,4 @@ const syncDatabase = async () => {
   }
 };
 
-export { sequelize, Puestos, syncDatabase };
+export { sequelize, Puestos, Factores, Niveles, PuestoFactores, syncDatabase };
