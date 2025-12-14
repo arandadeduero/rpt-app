@@ -20,6 +20,8 @@ The database schema includes:
 - **RPT Main Table**: Stores job positions with links to valuation levels
 - **Complete View**: Automatically calculates total scores for positions
 
+For a visual representation of the schema, see [SCHEMA_DIAGRAM.md](SCHEMA_DIAGRAM.md)
+
 ### Quick Start
 
 ```bash

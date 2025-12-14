@@ -6,6 +6,8 @@ This document describes the implementation of the Valoración (Valuation) system
 
 ## System Components
 
+For a visual representation of the database schema and relationships, see [SCHEMA_DIAGRAM.md](SCHEMA_DIAGRAM.md)
+
 ### 1. Factor Tables (A, B, C, D, E)
 
 The system includes five independent factor tables, each representing a different competency or requirement for job positions:
