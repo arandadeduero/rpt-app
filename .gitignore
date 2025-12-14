@@ -2,3 +2,12 @@ node_modules/
 dist/
 *.log
 .DS_Store
+# Exclude compiled TypeScript files in examples and test directories
+examples/**/*.js
+examples/**/*.d.ts
+examples/**/*.js.map
+examples/**/*.d.ts.map
+test/**/*.js
+test/**/*.d.ts
+test/**/*.js.map
+test/**/*.d.ts.map
