@@ -111,12 +111,23 @@ rpt-app/
 You can customize the following settings using environment variables:
 
 - `PORT`: Server port (default: 3000)
-- `SESSION_SECRET`: Session secret key (change in production)
+- `SESSION_SECRET`: **Required in production** - Session secret key for secure session management
+- `NODE_ENV`: Environment mode (development/production)
 
 Example:
 ```bash
-PORT=8080 SESSION_SECRET=your-secret-key npm start
+PORT=8080 SESSION_SECRET=your-secure-secret-key NODE_ENV=production npm start
 ```
+
+### Production Deployment
+
+For production deployments, ensure:
+
+1. Set `SESSION_SECRET` environment variable to a strong, random value
+2. Set `NODE_ENV=production`
+3. Use HTTPS (secure cookies will be automatically enabled)
+4. Consider using database migrations instead of automatic schema synchronization
+5. Use a production-grade database (PostgreSQL, MySQL) instead of SQLite for scalability
 
 ## License
 

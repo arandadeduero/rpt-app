@@ -27,7 +27,13 @@ Object.values(models).forEach((model) => {
 // Sync database
 const syncDatabase = async () => {
   try {
-    await sequelize.sync({ alter: true });
+    // In production, consider using migrations instead of auto-sync
+    // alter: true can cause data loss in production environments
+    const syncOptions = process.env.NODE_ENV === 'production' 
+      ? { alter: false } 
+      : { alter: true };
+    
+    await sequelize.sync(syncOptions);
     console.log('Database synced successfully');
   } catch (error) {
     console.error('Error syncing database:', error);

@@ -84,11 +84,17 @@ const adminRouter = AdminJSExpress.buildRouter(admin);
 
 app.use(
   session({
-    secret: process.env.SESSION_SECRET || 'rpt-app-secret-key-change-in-production',
+    secret: process.env.SESSION_SECRET || (() => {
+      if (process.env.NODE_ENV === 'production') {
+        throw new Error('SESSION_SECRET environment variable must be set in production');
+      }
+      console.warn('WARNING: Using default session secret. Set SESSION_SECRET environment variable for production.');
+      return 'rpt-app-dev-secret-key-not-for-production';
+    })(),
     resave: false,
     saveUninitialized: true,
     cookie: {
-      secure: false, // Set to true if using HTTPS
+      secure: process.env.NODE_ENV === 'production', // Use HTTPS in production
       maxAge: 1000 * 60 * 60 * 24, // 24 hours
     },
   })
